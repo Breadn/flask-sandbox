@@ -53,8 +53,14 @@
   }
   
   nav ul li a, nav ul li span, header .action {
+    text-decoration: none;
     display: block;
     padding: 0.5rem;
+  }
+
+  #user {
+    color: black;
+    padding-right: 10px;
   }
   
   .content {

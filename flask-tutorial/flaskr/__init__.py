@@ -27,17 +27,22 @@ def create_app(test_config=None):
         pass
     
 
-    # Initialize sqlite databasea
+    # Register sqlite databasea
     from . import db
     db.init_app(app)
 
-    # Associate auth blueprint
+    # Register auth blueprint
     from . import auth
     app.register_blueprint(auth.bp)
 
-    # Associate blog blueprint
+    # Register blog blueprint
     from . import blog
     app.register_blueprint(blog.bp)
     app.add_url_rule('/', endpoint='index')
+
+    # Register user blueprint
+    from . import user
+    app.register_blueprint(user.bp)
+
 
     return app
