@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-    <form method="post">
+    <form method="post" autocomplete="off">
         <label for="title">Title</label>
         <input name="title" id="title" value="{{ request.form['title'] }}">
         <label for="body">Body</label>
